@@ -1,11 +1,12 @@
 import { useState } from "react";
 import AmPmSelect from "./AmPmSelect";
+import Display from "./Display";
 
 function Content(){
     return (
         <>
             <AmPmSelect />
-            <p>Time goes here!</p>
+            <Display />
         </>
     )
 }
