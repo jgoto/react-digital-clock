@@ -6,9 +6,7 @@ import Display from "./Display";
 function Content(){
     return (
         <div className="content">
-            <AmPmSelect />
             <Display />
-            <TimeModeSelect />
         </div>
     )
 }

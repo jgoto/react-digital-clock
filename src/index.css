@@ -23,3 +23,22 @@ html, body{
   padding: 0;
   overflow: hidden;
 }
+
+a {
+  color: #3B82F6;
+  text-decoration: none;
+  transition: color 0.2 ease;
+}
+
+a:hover{
+  color: #60A5FA;
+}
+
+a:visited{
+  color: #9333EA;
+}
+
+a:focus, a:active{
+  color: #2563EB;
+  outline: none;
+}
