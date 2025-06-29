@@ -1,8 +1,9 @@
 import { useState } from "react";
+import styles from './DigitTile.module.css';
 
 function DigitTile({digit}){
     return (
-        <div>
+        <div className={styles.digitTile}>
             {digit}
         </div>
     )
