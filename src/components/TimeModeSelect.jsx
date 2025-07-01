@@ -1,9 +1,17 @@
 import { useState } from "react";
+import styles from './TimeModeSelect.module.css';
 
-function TimeModeSelect(){
+function TimeModeSelect({is24Hours, set24HourClock}){
     return (
         <>
-            <p>12/24</p>
+            <fieldset className={styles.timeSelect}>
+                <input type = "radio" name="time-mode" value="12" checked={is24Hours===false}
+                    onChange={() => set24HourClock(false)} />
+                <label>12 Hour</label>
+                <input type = "radio" name="time-mode" value="24" checked={is24Hours===true}
+                    onChange={() => set24HourClock(true)} />
+                <label>24 Hour</label>
+            </fieldset>            
         </>
     )
 }
