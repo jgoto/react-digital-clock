@@ -23,14 +23,18 @@ export function useClock(){
     }
 
     useEffect(() => {
-        const intervalId = setInterval(()=>{
-            setTime(new Date());
-            if(!is24Hours)
+        if(!is24Hours)
             {
                 setAmPm((time.getHours() >= 12) ? "PM" : "AM");
             }
             else
                 setAmPm("");
+    }, [is24Hours])
+
+    useEffect(() => {
+        const intervalId = setInterval(()=>{
+            const now = new Date();
+            setTime(now);            
         }, 1000);
         return () => clearInterval(intervalId);
     }, [is24Hours]);

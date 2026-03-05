@@ -1,9 +1,9 @@
 import styles from './DigitTile.module.css';
 
-function DigitTile({digit}){
+function DigitTile({char}){
     return (
         <div className={styles.digitTile}>
-            {digit}
+            {char}
         </div>
     )
 }

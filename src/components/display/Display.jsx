@@ -5,13 +5,13 @@ import TimeModeSelect from "./TimeModeSelect";
 import { useClock } from "../../hooks/useClock";
 
 function Display(){
-    const { time, formattedTime, is24Hours, set24HourClock } = useClock();
+    const { formattedTime, is24Hours, set24HourClock } = useClock();
     
     return (
         <div>
             <div className={styles.clockDisplay}>
                 { 
-                formattedTime
+                formattedTime.map((char, index)=><DigitTile key = {index} char = {char} />)
                 }
             </div>
             <TimeModeSelect is24Hours={is24Hours} set24HourClock={set24HourClock} />
